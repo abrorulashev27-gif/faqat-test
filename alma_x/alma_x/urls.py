@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from shop.views import PhoneListApiView, PhoneCreateApiView, PhoneEditApiView, PhoneDeleteApiView
+from shop.views import PhoneListApiView, PhoneCreateApiView, PhoneEditApiView, PhoneDeleteApiView, PhoneDetailApiView
 
 
 urlpatterns = [
@@ -25,5 +25,6 @@ urlpatterns = [
     path('phones/create/', PhoneCreateApiView.as_view(), name='phone_create'),
     path('phones/edit/<int:pk>/', PhoneEditApiView.as_view(), name='edit'),
     path('phones/delete/<int:pk>/', PhoneDeleteApiView.as_view(), name='phone-delete'),
+    path('phones/detail/<int:pk>/', PhoneDetailApiView.as_view(), name='phone-detail'),
 
 ]

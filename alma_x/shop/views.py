@@ -31,3 +31,11 @@ class PhoneDeleteApiView(generics.DestroyAPIView):
     queryset = Phone.objects.all()
     serializer_class = CarSerializer
 
+
+class PhoneDetailApiView(generics.RetrieveAPIView):
+    queryset = Phone.objects.all()
+    serializer_class = CarSerializer
+
+
+
+
